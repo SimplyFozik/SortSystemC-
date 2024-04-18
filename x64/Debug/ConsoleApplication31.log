@@ -1,0 +1,5 @@
+﻿  ConsoleApplication31.cpp
+C:\Users\top\Documents\ConsoleApplication31\ConsoleApplication31.cpp(10,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\top\Documents\ConsoleApplication31\ConsoleApplication31.cpp(16,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\top\Documents\ConsoleApplication31\ConsoleApplication31.cpp(23,23): warning C4018: <: несоответствие типов со знаком и без знака
+  ConsoleApplication31.vcxproj -> C:\Users\top\Documents\ConsoleApplication31\x64\Debug\ConsoleApplication31.exe
