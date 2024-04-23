@@ -65,4 +65,63 @@ void shaker_sort(S* arr, int size)
 		}
 		if (swaps == 0) break;
 	}
+
+}
+
+template <typename Y>
+void InsertSort(Y* arr, int size)
+{
+	for (int i = 1; i < size; i++)
+	{
+		for (int j = i; (j > 0) && (arr[j] < arr[j - 1]); j--)
+			swapfunc(arr[j], arr[j - 1]);
+	}
+}
+
+template <typename X>
+void MergeSort(X* arr, int size)
+{
+	if (size > 1)
+	{
+		int half1 = size / 2;
+		int half2 = size - half1;
+
+		int* merge1 = new int[half1];
+		int* merge2 = new int[half2];
+
+		for (int i = 0; i < half1; i++)
+			merge1[i] = arr[i];
+		for (int i = half1; i < size; i++)
+			merge2[i] = arr[i];
+
+		MergeSort(merge1, half1);
+		MergeSort(merge2, half2);
+
+		int i, h1, h2;
+		for (i = 0, h1 = 0, h2 = 0; i < size; i++)
+		{
+			if (merge1[h1] < merge2[h2])
+			{
+				arr[i] = merge1[h1];
+				h1++;
+				if (h1 == half1) break;
+			}
+			else
+			{
+				arr[i] = merge2[h2];
+				h2++;
+				if (h2 == half2) break;
+			}
+		}
+		if (h1 == half1)
+		{
+			for (; i < size; i++,h2++)
+				arr[i] = merge2[h2];
+		}
+		else
+		{
+			for (; i < size; i++, h1++)
+				arr[i] = merge1[h1];
+		}
+	}
 }

@@ -18,8 +18,8 @@ int main()
         arr[i] = rand() % 100;
         cout << arr[i] << " ";
     }
-    shaker_sort(arr, size);
-    cout << endl;
+    MergeSort(arr, size);
+    cout << endl << endl;
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
